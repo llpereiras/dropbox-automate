@@ -7,8 +7,7 @@ require 'dropbox'
 require 'yaml'
 
 config = YAML.load_file('dropbox.api.yml')
-token = config['token']
-dbx = Dropbox::Client.new(token)
+dbx = Dropbox::Client.new(config['token'])
 
 FOLDER_BACKUPS = nil
 
